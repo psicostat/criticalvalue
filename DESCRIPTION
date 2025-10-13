@@ -1,7 +1,7 @@
 Package: criticalESvalue
 Title: Compute Critical Effect Size Values From Common Statistics Models
 Description: Calculate and report critical effect size values for common statistical models from R objects and summary statistics.
-Version: 0.0.1
+Version: 1.0.0
 Authors@R: c(
     person("Ambra", "Perugini", , "ambra.perugini@phd.unipd.it", role = c("aut"),
            comment = c(ORCID = "0009-0001-4661-8063")),
