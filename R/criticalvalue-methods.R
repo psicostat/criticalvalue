@@ -111,7 +111,7 @@ critical.htest <- function(x, ...){
 #' @param ... Additional arguments (currently unused).
 #' @return an object of class critvalue
 #' @export
-critical.lm <- function(x, conf.level = 0.95, ...){
+critical.lm <- function(x, conf.level = 0.95, test = "t", ...){
   
   # always two.sided
   hypothesis <- "two.sided"
@@ -119,7 +119,7 @@ critical.lm <- function(x, conf.level = 0.95, ...){
   df <- x$df.residual
   
   seb <- sqrt(diag(stats::vcov(x))) # standard error coefficients
-  ll <- critical_coef(seb, df = df, conf.level = conf.level, hypothesis = hypothesis)
+  ll <- critical_coef(seb, df = df, conf.level = conf.level, hypothesis = hypothesis, test = test)
   d <- NA
   dc <- NA
   x$d <- NA

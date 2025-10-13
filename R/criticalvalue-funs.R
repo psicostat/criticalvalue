@@ -550,7 +550,7 @@ critical_coef <- function(seb, n = NULL, p = NULL,df = NULL,
   if(test == "t"){
     qc <- abs(stats::qt(alpha, df))
   }else{
-    qc <- abs(stats::qnorm(alpha, df))
+    qc <- abs(stats::qnorm(alpha))
   }
   
   bc <- qc * seb
