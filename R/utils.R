@@ -18,7 +18,7 @@
 }
 
 .get_alpha <- function(conf.level = 0.95,
-                      hypothesis = c("2t", "1t")){
+                       hypothesis = "two.sided"){
   hypothesis <- if(hypothesis == "two.sided") "2t" else "1t"
   alpha <- 1 - conf.level
   if(hypothesis == "2t"){
