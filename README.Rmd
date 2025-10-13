@@ -95,9 +95,7 @@ critical(ctest)
 ### Linear Model
 
 ```{r}
-
-set.seed(2255)
-
+set.seed(2025)
 # linear model (unstandardized)
 z <- rnorm(30)
 q <- rnorm(30)
