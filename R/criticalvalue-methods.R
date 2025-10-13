@@ -108,6 +108,7 @@ critical.htest <- function(x, ...){
 #' @description Compute critical effect size values for linear model coefficients of objects of class lm
 #' @param x an object of class lm
 #' @param conf.level the confidence interval level, needed to compute the smallest significant coefficient (default is 0.95, equaling a critical alpha = 0.05)
+#' @param test which test should be used. `t` for a standard t-test (the default) and `z` for a z test.
 #' @param ... Additional arguments (currently unused).
 #' @return an object of class critvalue
 #' @export
