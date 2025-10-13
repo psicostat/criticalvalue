@@ -142,8 +142,12 @@ critical.rma <- function(x, conf.level = 0.95, ...){
   if(inherits(x, "rma.uni")){
     hypothesis <- "two.sided"
     se <- x$se
-    df <- x$k.eff
-    ll <- critical_coef(se, df = df, conf.level = conf.level, hypothesis = hypothesis)
+    df <- x$dfs
+    test <- x$test
+    
+    # only z and t supported
+    test <- match.arg(test, choices = c("t", "z"))
+    ll <- critical_coef(se, df = df, conf.level = conf.level, hypothesis = hypothesis, test = test)
     d <- NA
     dc <- NA
     x$d <- NA
