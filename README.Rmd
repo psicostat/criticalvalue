@@ -45,6 +45,9 @@ library(criticalESvalue)
 ### T Test
 
 ```{r example}
+
+set.seed(2255)
+
 # t-test (welch)
 
 x <- rnorm(30, 0.5, 1)
@@ -92,6 +95,9 @@ critical(ctest)
 ### Linear Model
 
 ```{r}
+
+set.seed(2255)
+
 # linear model (unstandardized)
 z <- rnorm(30)
 q <- rnorm(30)
@@ -115,6 +121,8 @@ critical(fit)
 ## Example from summary statistics
 
 ```{r}
+set.seed(2255)
+
 x <- rnorm(30, 0.5, 1)
 y <- rnorm(30, 0, 1)
 
