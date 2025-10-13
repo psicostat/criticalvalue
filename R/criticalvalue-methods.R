@@ -72,7 +72,7 @@ critical.htest <- function(x, ...){
       n <- nrow(D)
       tt <- critical_t1s(t = t, se = se, n = n, hypothesis = hypothesis, conf.level = conf.level)
     } else if(grepl("Paired", method)){
-      n <- length(D$x)
+      n <- length(D$x[D$y == 1]) # n is not nrow(D)
       r12 <- stats::cor(D$x[D$y == 1], D$x[D$y == 2])
       tt <- critical_t2sp(t = t, 
                           se = se, 
@@ -175,13 +175,13 @@ print.critvalue <- function(x, digits = getOption("digits"), ...){
     if(grepl("Paired", x$method)){
       if(x$alternative == "two.sided"){
         cat("dz =", x$dz, "|dzc| =", abs(x$dzc), "\n")
-        cat("gz =", x$gz, "|gzc| =", abs(x$dzc), "\n")
+        cat("gz =", x$gz, "|gzc| =", abs(x$gzc), "\n")
       } else if(x$alternative == "greater"){
         cat("dz =", x$dz, "dzc =", abs(x$dzc), "\n")
-        cat("gz =", x$gz, "gzc =", abs(x$dzc), "\n")
+        cat("gz =", x$gz, "gzc =", abs(x$gzc), "\n")
       } else{
         cat("dz =", x$dz, "dzc =", -abs(x$dzc), "\n")
-        cat("gz =", x$gz, "gzc =", -abs(x$dzc), "\n")
+        cat("gz =", x$gz, "gzc =", -abs(x$gzc), "\n")
       }
     }
     
