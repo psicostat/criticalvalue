@@ -4,12 +4,14 @@
 \alias{critical.lm}
 \title{Compute critical effect size values for linear regression models}
 \usage{
-\method{critical}{lm}(x, conf.level = 0.95, ...)
+\method{critical}{lm}(x, conf.level = 0.95, test = "t", ...)
 }
 \arguments{
 \item{x}{an object of class lm}
 
 \item{conf.level}{the confidence interval level, needed to compute the smallest significant coefficient (default is 0.95, equaling a critical alpha = 0.05)}
+
+\item{test}{which test should be used. \code{t} for a standard t-test (the default) and \code{z} for a z test.}
 
 \item{...}{Additional arguments (currently unused).}
 }
