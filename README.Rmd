@@ -17,8 +17,12 @@ options(scipen = 999, digits = 5)
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/psicostat/criticalESvalue/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/psicostat/criticalESvalue/actions/workflows/R-CMD-check.yaml)
-[![test-coverage](https://github.com/psicostat/criticalESvalue/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/psicostat/criticalESvalue/actions/workflows/test-coverage.yaml)
+[![Codecov test coverage](https://codecov.io/gh/psicostat/criticalESvalue/graph/badge.svg)](https://app.codecov.io/gh/psicostat/criticalESvalue)
 <!-- badges: end -->
+
+# Breaking changes in v1.0.0
+
+**Version 1.0.0 introduces several improvements and bug fixes**. Please install or update to the latest version.
 
 # criticalESvalue
 
