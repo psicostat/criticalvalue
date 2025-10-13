@@ -72,12 +72,16 @@
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># loading the package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://psicostat.github.io/criticalESvalue/" class="external-link">criticalESvalue</a></span><span class="op">)</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://psicostat.github.io/criticalESvalue/" class="external-link">criticalESvalue</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; criticalESvalue v1.0.0!</span></span></code></pre></div>
 <div class="section level3">
 <h3 id="t-test">T Test<a class="anchor" aria-label="anchor" href="#t-test"></a>
 </h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># t-test (welch)</span></span>
+<code class="sourceCode R"><span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">2255</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># t-test (welch)</span></span>
 <span></span>
 <span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">0.5</span>, <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span></span>
@@ -88,17 +92,17 @@
 <span><span class="co">#&gt;  Welch Two Sample t-test</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; data:  x and y</span></span>
-<span><span class="co">#&gt; t = 1.8, df = 57.7, p-value = 0.077</span></span>
+<span><span class="co">#&gt; t = 1.87, df = 47.7, p-value = 0.068</span></span>
 <span><span class="co">#&gt; alternative hypothesis: true difference in means is not equal to 0</span></span>
 <span><span class="co">#&gt; 95 percent confidence interval:</span></span>
-<span><span class="co">#&gt;  -0.055794  1.065374</span></span>
+<span><span class="co">#&gt;  -0.03372  0.90924</span></span>
 <span><span class="co">#&gt; sample estimates:</span></span>
 <span><span class="co">#&gt; mean of x mean of y </span></span>
-<span><span class="co">#&gt;   0.36937  -0.13542 </span></span>
+<span><span class="co">#&gt;   0.68631   0.24855 </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; |== Effect Size and Critical Value ==| </span></span>
-<span><span class="co">#&gt; d = 0.46545 dc = ± 0.51689 bc = ± 0.56058 </span></span>
-<span><span class="co">#&gt; g = 0.45937 gc = ± 0.51014</span></span>
+<span><span class="co">#&gt; d = 0.4821 dc = ± 0.51924 bc = ± 0.47148 </span></span>
+<span><span class="co">#&gt; g = 0.47447 gc = ± 0.51102</span></span>
 <span></span>
 <span><span class="co"># t-test (standard)</span></span>
 <span></span>
@@ -108,17 +112,17 @@
 <span><span class="co">#&gt;  Two Sample t-test</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; data:  x and y</span></span>
-<span><span class="co">#&gt; t = 1.8, df = 58, p-value = 0.077</span></span>
+<span><span class="co">#&gt; t = 1.87, df = 58, p-value = 0.067</span></span>
 <span><span class="co">#&gt; alternative hypothesis: true difference in means is not equal to 0</span></span>
 <span><span class="co">#&gt; 95 percent confidence interval:</span></span>
-<span><span class="co">#&gt;  -0.055739  1.065319</span></span>
+<span><span class="co">#&gt;  -0.031541  0.907059</span></span>
 <span><span class="co">#&gt; sample estimates:</span></span>
 <span><span class="co">#&gt; mean of x mean of y </span></span>
-<span><span class="co">#&gt;   0.36937  -0.13542 </span></span>
+<span><span class="co">#&gt;   0.68631   0.24855 </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; |== Effect Size and Critical Value ==| </span></span>
-<span><span class="co">#&gt; d = 0.46545 dc = ± 0.51684 bc = ± 0.56053 </span></span>
-<span><span class="co">#&gt; g = 0.4594 gc = ± 0.51012</span></span>
+<span><span class="co">#&gt; d = 0.4821 dc = ± 0.51684 bc = ± 0.4693 </span></span>
+<span><span class="co">#&gt; g = 0.47584 gc = ± 0.51012</span></span>
 <span></span>
 <span><span class="co"># t-test (standard) with monodirectional hyp</span></span>
 <span></span>
@@ -128,42 +132,42 @@
 <span><span class="co">#&gt;  Two Sample t-test</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; data:  x and y</span></span>
-<span><span class="co">#&gt; t = 1.8, df = 58, p-value = 0.96</span></span>
+<span><span class="co">#&gt; t = 1.87, df = 58, p-value = 0.97</span></span>
 <span><span class="co">#&gt; alternative hypothesis: true difference in means is less than 0</span></span>
 <span><span class="co">#&gt; 95 percent confidence interval:</span></span>
-<span><span class="co">#&gt;     -Inf 0.97286</span></span>
+<span><span class="co">#&gt;     -Inf 0.82965</span></span>
 <span><span class="co">#&gt; sample estimates:</span></span>
 <span><span class="co">#&gt; mean of x mean of y </span></span>
-<span><span class="co">#&gt;   0.36937  -0.13542 </span></span>
+<span><span class="co">#&gt;   0.68631   0.24855 </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; |== Effect Size and Critical Value ==| </span></span>
-<span><span class="co">#&gt; d = 0.46545 dc = -0.43159 bc = -0.46807 </span></span>
-<span><span class="co">#&gt; g = 0.4594 gc = -0.42598</span></span>
+<span><span class="co">#&gt; d = 0.4821 dc = -0.43159 bc = -0.39189 </span></span>
+<span><span class="co">#&gt; g = 0.47584 gc = -0.42598</span></span>
 <span></span>
 <span><span class="co"># within the t-test object saved from critical we have all the new values</span></span>
 <span></span>
 <span><span class="va">ttest</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/critical.html">critical</a></span><span class="op">(</span><span class="va">ttest</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">ttest</span><span class="op">)</span></span>
 <span><span class="co">#&gt; List of 15</span></span>
-<span><span class="co">#&gt;  $ statistic  : Named num 1.8</span></span>
+<span><span class="co">#&gt;  $ statistic  : Named num 1.87</span></span>
 <span><span class="co">#&gt;   ..- attr(*, "names")= chr "t"</span></span>
 <span><span class="co">#&gt;  $ parameter  : Named num 58</span></span>
 <span><span class="co">#&gt;   ..- attr(*, "names")= chr "df"</span></span>
-<span><span class="co">#&gt;  $ p.value    : num 0.962</span></span>
-<span><span class="co">#&gt;  $ conf.int   : num [1:2] -Inf 0.973</span></span>
+<span><span class="co">#&gt;  $ p.value    : num 0.967</span></span>
+<span><span class="co">#&gt;  $ conf.int   : num [1:2] -Inf 0.83</span></span>
 <span><span class="co">#&gt;   ..- attr(*, "conf.level")= num 0.95</span></span>
-<span><span class="co">#&gt;  $ estimate   : Named num [1:2] 0.369 -0.135</span></span>
+<span><span class="co">#&gt;  $ estimate   : Named num [1:2] 0.686 0.249</span></span>
 <span><span class="co">#&gt;   ..- attr(*, "names")= chr [1:2] "mean of x" "mean of y"</span></span>
 <span><span class="co">#&gt;  $ null.value : Named num 0</span></span>
 <span><span class="co">#&gt;   ..- attr(*, "names")= chr "difference in means"</span></span>
-<span><span class="co">#&gt;  $ stderr     : num 0.28</span></span>
+<span><span class="co">#&gt;  $ stderr     : num 0.234</span></span>
 <span><span class="co">#&gt;  $ alternative: chr "less"</span></span>
 <span><span class="co">#&gt;  $ method     : chr " Two Sample t-test"</span></span>
 <span><span class="co">#&gt;  $ data.name  : chr "x and y"</span></span>
-<span><span class="co">#&gt;  $ g          : num 0.459</span></span>
+<span><span class="co">#&gt;  $ g          : num 0.476</span></span>
 <span><span class="co">#&gt;  $ gc         : num 0.426</span></span>
-<span><span class="co">#&gt;  $ d          : num 0.465</span></span>
-<span><span class="co">#&gt;  $ bc         : num 0.468</span></span>
+<span><span class="co">#&gt;  $ d          : num 0.482</span></span>
+<span><span class="co">#&gt;  $ bc         : num 0.392</span></span>
 <span><span class="co">#&gt;  $ dc         : num 0.432</span></span>
 <span><span class="co">#&gt;  - attr(*, "class")= chr [1:3] "critvalue" "ttest" "htest"</span></span></code></pre></div>
 <p>We can check the results using:</p>
@@ -188,13 +192,13 @@
 <span><span class="co">#&gt;  Pearson's product-moment correlation</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; data:  x and y</span></span>
-<span><span class="co">#&gt; t = 0.257, df = 28, p-value = 0.8</span></span>
+<span><span class="co">#&gt; t = -0.538, df = 28, p-value = 0.59</span></span>
 <span><span class="co">#&gt; alternative hypothesis: true correlation is not equal to 0</span></span>
 <span><span class="co">#&gt; 95 percent confidence interval:</span></span>
-<span><span class="co">#&gt;  -0.31735  0.40172</span></span>
+<span><span class="co">#&gt;  -0.44520  0.26891</span></span>
 <span><span class="co">#&gt; sample estimates:</span></span>
 <span><span class="co">#&gt;      cor </span></span>
-<span><span class="co">#&gt; 0.048461 </span></span>
+<span><span class="co">#&gt; -0.10116 </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; |== Critical Value ==| </span></span>
 <span><span class="co">#&gt; |rc| = 0.36101</span></span></code></pre></div>
@@ -203,7 +207,8 @@
 <h3 id="linear-model">Linear Model<a class="anchor" aria-label="anchor" href="#linear-model"></a>
 </h3>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># linear model (unstandardized)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">2025</span><span class="op">)</span></span>
+<span><span class="co"># linear model (unstandardized)</span></span>
 <span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">30</span><span class="op">)</span></span>
 <span><span class="va">q</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">30</span><span class="op">)</span></span>
 <span></span>
@@ -217,32 +222,32 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Coefficients:</span></span>
 <span><span class="co">#&gt; (Intercept)            x            q            z  </span></span>
-<span><span class="co">#&gt;    -0.11680      0.06495     -0.13635      0.00332  </span></span>
+<span><span class="co">#&gt;      0.3215      -0.1352       0.1245       0.0583  </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Critical |Coefficients| </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; (Intercept)           x           q           z </span></span>
-<span><span class="co">#&gt;     0.48599     0.43970     0.50174     0.39505</span></span>
+<span><span class="co">#&gt;     0.65627     0.67405     0.48109     0.47484</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Call:</span></span>
 <span><span class="co">#&gt; lm(formula = y ~ x + q + z, data = dat)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Residuals:</span></span>
-<span><span class="co">#&gt;     Min      1Q  Median      3Q     Max </span></span>
-<span><span class="co">#&gt; -1.8786 -0.9037 -0.0576  0.8473  2.3993 </span></span>
+<span><span class="co">#&gt;    Min     1Q Median     3Q    Max </span></span>
+<span><span class="co">#&gt; -1.700 -0.936  0.141  0.696  1.933 </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Coefficients:</span></span>
 <span><span class="co">#&gt;             Estimate |Critical Estimate| Std. Error t value Pr(&gt;|t|)</span></span>
-<span><span class="co">#&gt; (Intercept) -0.11680             0.48599    0.23643   -0.49     0.63</span></span>
-<span><span class="co">#&gt; x            0.06495             0.43970    0.21391    0.30     0.76</span></span>
-<span><span class="co">#&gt; q           -0.13635             0.50174    0.24409   -0.56     0.58</span></span>
-<span><span class="co">#&gt; z            0.00332             0.39505    0.19219    0.02     0.99</span></span>
+<span><span class="co">#&gt; (Intercept)   0.3215              0.6563     0.3193    1.01     0.32</span></span>
+<span><span class="co">#&gt; x            -0.1352              0.6741     0.3279   -0.41     0.68</span></span>
+<span><span class="co">#&gt; q             0.1245              0.4811     0.2340    0.53     0.60</span></span>
+<span><span class="co">#&gt; z             0.0583              0.4748     0.2310    0.25     0.80</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Residual standard error: 1.17 on 26 degrees of freedom</span></span>
-<span><span class="co">#&gt; Multiple R-squared:  0.0162, Adjusted R-squared:  -0.0973 </span></span>
-<span><span class="co">#&gt; F-statistic: 0.143 on 3 and 26 DF,  p-value: 0.933</span></span></code></pre></div>
+<span><span class="co">#&gt; Residual standard error: 1.15 on 26 degrees of freedom</span></span>
+<span><span class="co">#&gt; Multiple R-squared:  0.0212, Adjusted R-squared:  -0.0917 </span></span>
+<span><span class="co">#&gt; F-statistic: 0.188 on 3 and 26 DF,  p-value: 0.904</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="meta-analysis">Meta-analysis<a class="anchor" aria-label="anchor" href="#meta-analysis"></a>
@@ -253,7 +258,7 @@
 <span><span class="co">#&gt; Loading required package: metadat</span></span>
 <span><span class="co">#&gt; Loading required package: numDeriv</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Loading the 'metafor' package (version 4.6-0). For an</span></span>
+<span><span class="co">#&gt; Loading the 'metafor' package (version 4.8-0). For an</span></span>
 <span><span class="co">#&gt; introduction to the package please type: help(metafor)</span></span>
 <span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://wviechtb.github.io/metafor/reference/escalc.html" class="external-link">escalc</a></span><span class="op">(</span>measure<span class="op">=</span><span class="st">"RR"</span>, ai<span class="op">=</span><span class="va">tpos</span>, bi<span class="op">=</span><span class="va">tneg</span>, ci<span class="op">=</span><span class="va">cpos</span>, di<span class="op">=</span><span class="va">cneg</span>, data<span class="op">=</span><span class="va">dat.bcg</span><span class="op">)</span></span>
 <span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://wviechtb.github.io/metafor/reference/rma.uni.html" class="external-link">rma</a></span><span class="op">(</span><span class="va">yi</span>, <span class="va">vi</span>, mods<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">ablat</span>, <span class="va">year</span><span class="op">)</span>, data<span class="op">=</span><span class="va">dat</span><span class="op">)</span></span>
@@ -284,16 +289,18 @@
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;         |critical estimate|</span></span>
-<span><span class="co">#&gt; intrcpt            62.85783</span></span>
-<span><span class="co">#&gt; ablat               0.02211</span></span>
-<span><span class="co">#&gt; year                0.03172</span></span></code></pre></div>
+<span><span class="co">#&gt; intrcpt            57.02688</span></span>
+<span><span class="co">#&gt; ablat               0.02006</span></span>
+<span><span class="co">#&gt; year                0.02878</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
 <h2 id="example-from-summary-statistics">Example from summary statistics<a class="anchor" aria-label="anchor" href="#example-from-summary-statistics"></a>
 </h2>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">0.5</span>, <span class="fl">1</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">2255</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">0.5</span>, <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">ttest</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
@@ -306,47 +313,47 @@
 <span></span>
 <span><span class="fu"><a href="reference/critical_t2s.html">critical_t2s</a></span><span class="op">(</span><span class="va">m1</span>, <span class="va">m2</span>, sd1 <span class="op">=</span> <span class="va">sd1</span>, sd2 <span class="op">=</span> <span class="va">sd2</span>, n1 <span class="op">=</span> <span class="va">n1</span>, n2 <span class="op">=</span> <span class="va">n2</span><span class="op">)</span></span>
 <span><span class="co">#&gt; $d</span></span>
-<span><span class="co">#&gt; [1] -0.023955</span></span>
+<span><span class="co">#&gt; [1] 0.4821</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $dc</span></span>
-<span><span class="co">#&gt; [1] 0.51721</span></span>
+<span><span class="co">#&gt; [1] 0.51924</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $bc</span></span>
-<span><span class="co">#&gt; [1] 0.52285</span></span>
+<span><span class="co">#&gt; [1] 0.47148</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $se</span></span>
-<span><span class="co">#&gt; [1] 0.26102</span></span>
+<span><span class="co">#&gt; [1] 0.23445</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $df</span></span>
-<span><span class="co">#&gt; [1] 56.144</span></span>
+<span><span class="co">#&gt; [1] 47.653</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $g</span></span>
-<span><span class="co">#&gt; [1] -0.023633</span></span>
+<span><span class="co">#&gt; [1] 0.47447</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $gc</span></span>
-<span><span class="co">#&gt; [1] 0.51026</span></span>
+<span><span class="co">#&gt; [1] 0.51102</span></span>
 <span></span>
 <span><span class="fu"><a href="reference/critical_t2s.html">critical_t2s</a></span><span class="op">(</span>t <span class="op">=</span> <span class="va">ttest</span><span class="op">$</span><span class="va">statistic</span>, se <span class="op">=</span> <span class="va">ttest</span><span class="op">$</span><span class="va">stderr</span>, n1 <span class="op">=</span> <span class="va">n1</span>, n2 <span class="op">=</span> <span class="va">n2</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning in crit_from_t_t2s(t = t, n1 = n1, n2 = n2, se = se, conf.level =</span></span>
 <span><span class="co">#&gt; conf.level, : When var.equal = FALSE the critical value calculated from t</span></span>
 <span><span class="co">#&gt; assume sd1 = sd2!</span></span>
 <span><span class="co">#&gt; $d</span></span>
-<span><span class="co">#&gt; [1] -0.023955</span></span>
+<span><span class="co">#&gt; [1] 0.4821</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $dc</span></span>
 <span><span class="co">#&gt; [1] 0.51684</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $bc</span></span>
-<span><span class="co">#&gt; [1] 0.52248</span></span>
+<span><span class="co">#&gt; [1] 0.4693</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $se</span></span>
-<span><span class="co">#&gt; [1] 0.26102</span></span>
+<span><span class="co">#&gt; [1] 0.23445</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $df</span></span>
 <span><span class="co">#&gt; [1] 58</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $g</span></span>
-<span><span class="co">#&gt; [1] -0.023643</span></span>
+<span><span class="co">#&gt; [1] 0.47584</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $gc</span></span>
 <span><span class="co">#&gt; [1] 0.51012</span></span>
@@ -358,7 +365,7 @@
 <span><span class="co">#&gt; Warning in crit_from_t_t2s(t = t, n1 = n1, n2 = n2, se = se, conf.level =</span></span>
 <span><span class="co">#&gt; conf.level, : When se = NULL bc cannot be computed, returning NA!</span></span>
 <span><span class="co">#&gt; $d</span></span>
-<span><span class="co">#&gt; [1] -0.023955</span></span>
+<span><span class="co">#&gt; [1] 0.4821</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $dc</span></span>
 <span><span class="co">#&gt; [1] 0.51684</span></span>
@@ -373,7 +380,7 @@
 <span><span class="co">#&gt; [1] 58</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $g</span></span>
-<span><span class="co">#&gt; [1] -0.023643</span></span>
+<span><span class="co">#&gt; [1] 0.47584</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $gc</span></span>
 <span><span class="co">#&gt; [1] 0.51012</span></span></code></pre></div>
